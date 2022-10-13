@@ -1,0 +1,4 @@
+/* This Docker file is to pull latest tomcat image from docker hub and to move the contents of webapps.dist to webapps and make it permanent*/
+[root@DockerHost ~]# cat Dockerfile
+FROM tomcat:latest
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
